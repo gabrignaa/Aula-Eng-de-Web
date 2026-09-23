@@ -1,3 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
-     
+<html lang="pt-br">
+    <head>
+        <title>Inscrição - Campeonato de Vôlei</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Campeonato de Vôlei</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Inscreva-se para o campeonato</h2>
+                <form action="https://postman-echo.com/post" method="post">
+                    <p>Preencha o formulário abaixo para participar do campeonato de vôlei</p>
+
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <!-- required -->
+                        <div>
+                            <label for="nome_id">Nome completo:</label>
+                            <input id="nome_id" name="nome" type="text" required>
+                        </div>
+
+                        <!-- placeholder -->
+                        <div>
+                            <label for="email_id">Email:</label>
+                            <input id="email_id" name="email" type="email" placeholder="seuemail@exemplo.com">
+                        </div>
+
+                        <!-- pattern de validação: telefone no formato (XX) XXXXX-XXXX -->
+                        <div>
+                            <label for="telefone_id">Telefone:</label>
+                            <input id="telefone_id" name="telefone" type="tel"
+                                   placeholder="(11) 91234-5678"
+                                   pattern="\(\d{2}\) \d{4,5}-\d{4}">
+                        </div>
+
+                        <div>
+                            <label for="dt_nasc_id">Data de nascimento:</label>
+                            <input id="dt_nasc_id" name="data_nasc" type="date">
+                        </div>
+
+                        <div>
+                            <label for="altura_id">Altura (cm):</label>
+                            <input id="altura_id" name="altura" type="number" min="120" max="230">
+                        </div>
+
+                        <div>
+                            <label for="clube_id">Clube/Time:</label>
+                            <input id="clube_id" name="clube" type="text">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Informações do jogador</legend>
+
+                        <div>
+                            <label for="posicao_id">Posição principal:</label>
+                            <select id="posicao_id" name="posicao">
+                                <option value="levantador">Levantador</option>
+                                <option value="ponteiro">Ponteiro</option>
+                                <option value="oposto">Oposto</option>
+                                <option value="central">Central</option>
+                                <option value="libero">Líbero</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="anos_id">Anos de experiência:</label>
+                            <input id="anos_id" name="anos_experiencia" type="number" min="0">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Categoria</legend>
+
+                        <div>
+                            <input id="cat_masc_id" name="categoria" type="radio" value="masculino">
+                            <label for="cat_masc_id">Masculino</label>
+                        </div>
+                        <div>
+                            <input id="cat_fem_id" name="categoria" type="radio" value="feminino">
+                            <label for="cat_fem_id">Feminino</label>
+                        </div>
+                        <div>
+                            <input id="cat_misto_id" name="categoria" type="radio" value="misto">
+                            <label for="cat_misto_id">Misto</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Disponibilidade para treinos</legend>
+
+                        <div>
+                            <input id="disp_manha_id" name="disponibilidade" type="checkbox" value="manha">
+                            <label for="disp_manha_id">Manhã</label>
+                        </div>
+                        <div>
+                            <input id="disp_tarde_id" name="disponibilidade" type="checkbox" value="tarde">
+                            <label for="disp_tarde_id">Tarde</label>
+                        </div>
+                        <div>
+                            <input id="disp_noite_id" name="disponibilidade" type="checkbox" value="noite">
+                            <label for="disp_noite_id">Noite</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Observações</legend>
+                        <div>
+                            <label for="obs_id">Alguma informação adicional?</label>
+                            <textarea id="obs_id" name="observacoes"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <button type="reset">Limpar dados</button>
+                        <button type="submit">Enviar inscrição</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Todos os direitos reservados &copy;</p>
+        </footer>
+    </body>
+</html>
